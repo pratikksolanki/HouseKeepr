@@ -50,6 +50,8 @@ async function authenticateUser(username, password) {
     if (entered_salt_hash == hash) {
       localStorage.setItem('user', id)
       window.location.href = "/dashboard.html";
+    } else {
+      alert('Incorrect Password! Please try again')
     }
   }
 }
