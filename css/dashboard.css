@@ -3,15 +3,15 @@
     --black: #2D2D2D;
     --white: #F8F8F8;
 }
-.dashboard{
+/* .dashboard{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
+} */
 
 
-.task-board{
+/* .task-board{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,12 +19,17 @@
     margin-top: auto;
     height: 800px;
     width: 400px;
-}
+} */
 
-.search-box{
+/* .search-box{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+} */
+
+.search-col{
+    border-width: 1px;
+    border-color: #2D2D2D;
 }
 
 .scrollable-content {

@@ -1,12 +1,12 @@
 $(document).ready(() => {
-  getGroceryData('Apple', createGroceryCards)
+  getGroceryData('', createGroceryCards)
   $("#grocery_search_bar").on('input', function(){
     var query = $("#grocery_search_bar").val()
     getGroceryData(query, createGroceryCards)
   });
 })
 
-function getGroceryData(queryString="Apple", callback) {
+function getGroceryData(queryString="", callback) {
   var endpoint = `https://edamam-food-and-grocery-database.p.rapidapi.com/parser?ingr=${queryString}`
   $.ajax({
     url : endpoint,

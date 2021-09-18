@@ -25,20 +25,36 @@
                 <button>House Tasks</button>
                 <button>My Tasks</button>
             </div> -->
-        <div
-          id="groceries-container"
-          class="task-board scrollable-content"
-          style="width: 50%; padding-top: 450px"
-        ></div>
+        <div class="row">
+          <div class="col border">
+            <div class="search-box" style="width: 80%;">
+              <input
+                id="grocery_search_bar"
+                class="m-3 form-control"
+                type="text"
+                placeholder="Search"
+              />
+            </div>
+            <div
+              id="groceries-container"
+              class="task-board scrollable-content"
+              style="width: 90%;">
+            </div>
+          </div>
 
-        <div class="search-box" style="width: 40%; padding-top: 450px">
-          <input
-            id="grocery_search_bar"
-            class="m-3 form-control"
-            type="text"
-            placeholder="Search"
-          />
+          <div class="col border">
+            <div
+              id="added-groc-container"
+              class="task-board scrollable-content"
+              style="width: 90%;">
+            </div>
+          </div>
         </div>
+        
+        
+        
+
+        
       </div>
     </div>
 
