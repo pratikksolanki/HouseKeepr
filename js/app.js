@@ -40,8 +40,6 @@ function getGroceryData(queryString="Apple", callback) {
     },
     headers: {
       // API KEY and other headers.
-      "x-rapidapi-host": "edamam-food-and-grocery-database.p.rapidapi.com",
-      "x-rapidapi-key": "01f31a0914mshebf9587336e25bfp16dadcjsncca61ccdae96"
     }
   })
 }
