@@ -14,22 +14,59 @@
 </head>
 
 <body>
-  <div class="container">
+
+  <!--
+    <div class="container">
     <h1 class="m-4 display-1 text-center text-light">House Keepr</h1>
-    <div class="row" id="movies-container"></div>
     <div class="mb-3">
-      <label for="username_box" class="form-label">Username</label>
-      <input class="form-control" id="username_box" aria-describedby="userHelp" />
-      <div id="userHelp" class="form-text">
+      <label for="username_box" class="form-label text-light">Username</label>
+      <input class="form-control text-light" id="username_box" aria-describedby="userHelp"
+        placeholder="Enter Username" />
+      <div id="userHelp" class="form-text text-light">
         Please enter your username above.
       </div>
     </div>
     <div class="mb-3">
-      <label for="password_box" class="form-label">Password</label>
-      <input type="password" class="form-control" id="password_box" />
+      <label for="password_box" class="form-label text-light">Password</label>
+      <input type="password" class="form-control text-light" id="password_box" placeholder="Enter Password" />
     </div>
-    <button id="login_button" class="btn btn-primary">Log In</button>
+    <button id="login_button" class="btn btn-primary text-light">Log In</button>
   </div>
+  -->
+
+  <section class="form my-4 mx-5">
+    <div class="container">
+      <div class="row no-gutters">
+        <div class="col-lg-5">
+          <img src="housekeepr1.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-7 px-5 pt-5">
+          <h1 class="font-weight-bold py-3">Logo</h1>
+          <h4>Sign into your account</h4>
+          <form action="">
+            <div class="form-row">
+              <div class="col-lg-7">
+                <input id="username_box" type="text" class="form-control my-3 p-3" placeholder="Enter Username">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-lg-7">
+                <input id="password_box" type="password" class="form-control my-3 p-3" placeholder="Enter Password">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-lg-7">
+                <button id="login_button" type="button" class="btn1 mt-3 mb-5">Login</button>
+              </div>
+            </div>
+            <a href="#">Forgot Password</a>
+            <p>Don't have an account? <a href="#">Register Here</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </body>
 
 </html>
