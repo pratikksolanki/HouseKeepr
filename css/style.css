@@ -1,0 +1,11 @@
+:root{
+    --purple: #6A4FF9;
+    --black: #2D2D2D;
+    --white: #F8F8F8;
+}
+
+body {
+    color: --purple;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(106,79,249,1) 50%, rgba(208,199,255,1) 100%);
+}
