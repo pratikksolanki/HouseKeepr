@@ -13,7 +13,11 @@ $(document).ready(() => {
       return response.json();
     })
     .then(data => {
-      HOUSE = data[USER['house_id']]
+      if (!localStorage.getItem('house_data')) {
+        localStorage.setItem('house_data', JSON.stringify(data[USER['house_id']]))
+      }
+      HOUSE = JSON.parse(localStorage.getItem('house_data'))
+      createAddedGroceryCards()
       console.log(USER, HOUSE)
       $('#house_header').text(HOUSE['address'])
       getGroceryData('Apple', createGroceryCards)
@@ -80,8 +84,8 @@ function createGroceryCards (groceries) {
   $('#groceries-container').append(cardString)
   $("[id^='add_food_btn_']").on('click', (e) => {
     let data = e.target.dataset
-    HOUSE['grocery_list'][data.foodid]= {foodId: data.foodid, category: data.category, label: data.label, image: data.image}
-    console.log(HOUSE)
+    HOUSE['grocery_list'][data.foodid]= {foodId: data.foodid, category: data.category, label: data.label, image: data.image, user: USER}
+    writeJson('house_data', HOUSE)
     createAddedGroceryCards()
   })
 }
@@ -96,6 +100,7 @@ function createAddedGroceryCards () {
     <div class="card-body">
       <h5 class="card-title">${food_info['label']}</h5>
       <i class="card-text">${food_info['category']}
+      <i class="card-text">${food_info['user']['firstName']} ${food_info['user']['lastName']}
       </i>
       <a id="remove_food_btn_${food_info['foodId']}" data-foodId='${food_info['foodId']}' class="btn btn-secondary">-
       </a>
@@ -108,9 +113,13 @@ function createAddedGroceryCards () {
   $('#added-groc-container').append(cardString)
   $("[id^='remove_food_btn_']").on('click', (e) => {
     delete HOUSE['grocery_list'][e.target.dataset.foodid]
-    console.log(HOUSE)
+    writeJson('house_data', HOUSE)
     createAddedGroceryCards()
   })
+}
+
+function writeJson(name, obj) {
+  localStorage.setItem(name, JSON.stringify(obj))
 }
 
 
