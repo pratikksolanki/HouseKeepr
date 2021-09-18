@@ -1,0 +1,84 @@
+:root{
+    --purple: #6A4FF9;
+    --black: #2D2D2D;
+    --white: #F8F8F8;
+}
+.dashboard{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.task-board{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: auto;
+    height: 800px;
+    width: 400px;
+}
+
+.search-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.scrollable-content {
+    height: 600px;
+    width: auto;
+    overflow: scroll;
+    overflow-x:hidden ;
+    
+}
+
+.btn-primary {
+    color: #ffffff;
+    background-color: var(--purple);
+    border-color: var(--purple);
+}
+
+.btn-primary:hover {
+    color: #ffffff;
+    background-color: #4c37b1;
+    border-color: #4c37b1;
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+    box-shadow: 0 0 0 .1rem rgba(46, 34, 119, 0.712)
+}
+
+.small-icons{
+    size: 0.8em;
+}
+.feather-sm{
+    height: 20px;
+    width: 20px;
+}
+
+
+
+
+* {
+scrollbar-width: auto;
+scrollbar-color: #6A4FF9 #ffffff;
+}
+
+
+*::-webkit-scrollbar {
+width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+background-color: #6A4FF9;
+border-radius: 10px;
+border: 3px solid #ffffff;
+}
