@@ -1,0 +1,26 @@
+{
+  "0": {
+    "userid": "reyanshpat",
+    "pwd": "7e836945aeaa0d4dcb8704c5dee3e9356e73316062582f65507d7c7c1e7ac4e5",
+    "salt": "apple",
+    "firstName": "Reyansh",
+    "lastName": "Patange",
+    "house_id": 0
+  },
+  "1": {
+    "userid": "pratiksolanki",
+    "pwd": "235b1b7a13786ea09c1b77fe25d198b80d52ef85bc2c04516fe1face49780044",
+    "salt": "orange",
+    "firstName": "Pratik",
+    "lastName": "Solanki",
+    "house_id": 0
+  },
+  "3": {
+    "userid": "harshdave",
+    "pwd": "756ad3b650d848a422d6ba1013fc52794947db3c6a284e5d2f0801dfe6eaec7e",
+    "salt": "banana",
+    "firstName": "Harsh",
+    "lastName": "Dave",
+    "house_id": 0
+  }
+}
