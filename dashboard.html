@@ -8,27 +8,72 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <script src="https://unpkg.com/feather-icons"></script>
-    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="/css/dashboard.css">
 </head>
 <body>
     <h1>Hello, world!</h1>
 
-    <div class="dashboard">
-        <div id="screens">
-            <button>House Tasks</button>
-            <button>My Tasks</button>
-        </div>
-        <div id="task-board">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Accept</a>
-                  <a href="#" class="btn btn-secondary"> <i data-feather="maximize-2"></i> </a>
-                  <p class="card-text">Finish by: <span class="date">Sep 18</span></p>
+    <div class="container">
+        <div class="dashboard">
+            <!-- <div id="screens">
+                <button>House Tasks</button>
+                <button>My Tasks</button>
+            </div> -->
+            <div class="task-board scrollable-content" style="width: 50%; padding-top: 450px;">
+    
+               
+                <div class="card" style="width: auto; margin: 2.5%">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card 1</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary purple">Accept</a>
+                      <a href="#" class="btn btn-secondary"> <i class="feather-sm" data-feather="maximize-2"></i> </a>
+                      <p class="card-text user"><span class="user">name</span></p>
+                    </div>
                 </div>
-              </div>
+    
+                <div class="card" style="width: auto; margin: 2.5%">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card 2</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary purple">Accept</a>
+                      <a href="#" class="btn btn-secondary"> <i class="feather-sm" data-feather="maximize-2"></i> </a>
+                      <p class="card-text user"><span class="user">name</span></p>
+                    </div>
+                </div>
+    
+                <div class="card" style="width: auto; margin: 2.5%">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card 3</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary purple">Accept</a>
+                      <a href="#" class="btn btn-secondary"> <i class="feather-sm" data-feather="maximize-2"></i> </a>
+                      <p class="card-text user"><span class="user">name</span></p>
+                    </div>
+                </div>
+    
+                <div class="card" style="width: auto; margin: 2.5%">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card 4</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary purple">Accept</a>
+                      <a href="#" class="btn btn-secondary"> <i class="feather-sm" data-feather="maximize-2"></i> </a>
+                      <p class="card-text user"><span class="user">name</span></p>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div class="search-box" style="width: 40%; padding-top: 450px;">
+    
+                <input id="grocery_search_bar" class="m-3 form-control" type="text" placeholder="Search">
+    
+            </div>
         </div>
     </div>
 
