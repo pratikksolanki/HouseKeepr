@@ -1,7 +1,6 @@
 var HOUSE
 var USER
 
-
 $(document).ready(() => {
   fetch("../json/users.json")
     .then(response => {
@@ -21,6 +20,7 @@ $(document).ready(() => {
           createAddedGroceryCards()
           $('#house_header').text(HOUSE['address'])
           getGroceryData('Apple', createGroceryCards)
+
           $("#grocery_search_bar").on('input', function () {
             var query = $("#grocery_search_bar").val()
             getGroceryData(query, createGroceryCards)
@@ -33,7 +33,6 @@ $(document).ready(() => {
               alert("Please enter a note!");
               return;
             }
-
             var note_id = generateNotesID()
             var note_object = {
               id: note_id,
@@ -59,8 +58,6 @@ function getGroceryData(queryString = "Apple", callback) {
     },
     headers: {
       // API KEY and other headers.
-      "x-rapidapi-host": "edamam-food-and-grocery-database.p.rapidapi.com",
-      "x-rapidapi-key": "01f31a0914mshebf9587336e25bfp16dadcjsncca61ccdae96"
     }
   })
 }
@@ -115,7 +112,6 @@ function createGroceryCards(groceries) {
       </div>
     
     </div>
-    
     `
   }
 
@@ -168,7 +164,7 @@ function createAddedGroceryCards() {
           <h5 class="card-title">${note['user']['firstName']} ${note['user']['lastName']} says:</h5>
           <i class="card-text note-text">${note['note']}
           </i>
-       </div>
+        </div>
       </div>  
 
       <div id="remove_note_btn_${note['id']}" class="customcol"> 
