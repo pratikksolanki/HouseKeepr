@@ -1,6 +1,7 @@
 var HOUSE
 var USER
 
+
 $(document).ready(() => {
   fetch("../json/users.json")
     .then(response => {
@@ -67,17 +68,26 @@ function createGroceryCards(groceries) {
   for (let food of groceries.parsed) {
     food_info = food['food']
     cardString += `
-
+    
     <div id='food_card_${food_info['foodId']}' data-foodId=${food_info['foodId']} class="card" style="width: auto; margin: 2.5%">
-    <img src="${food_info['image'] === null ? 'https://p.kindpng.com/picc/s/79-798754_hoteles-y-centros-vacacionales-dish-placeholder-hd-png.png' : food_info['image']}" alt="${food_info['label']}" width='100px' height='100px'/>
-    <div class="card-body">
-      <h5 class="card-title">${food_info['label']}</h5>
-      <i class="card-text">${food_info['category']}
-      </i>
-      <a id="add_food_btn_${food_info['foodId']}" data-category='${food_info['category']}' data-foodId='${food_info['foodId']}' data-label='${food_info['label']}' data-image='${food_info['image']}' class="btn btn-secondary">+
-      </a>
+      <div class="customrow"> 
+        
+        <div class="customcol"> 
+        <img src="${food_info['image'] === null ? 'https://p.kindpng.com/picc/s/79-798754_hoteles-y-centros-vacacionales-dish-placeholder-hd-png.png' : food_info['image']}" alt="${food_info['label']}" height='120px'/>
+        </div>
+
+        <div class="customcol"> 
+          <div class="card-body">
+            <h5 class="card-title">${food_info['label']}</h5>
+            <i class="card-text">${food_info['category']}</i>
+            <a id="add_food_btn_${food_info['foodId']}" data-category='${food_info['category']}' data-foodId='${food_info['foodId']}' data-label='${food_info['label']}' data-image='${food_info['image']}' class="btn btn-light custom-btn">✔
+          </a>
+          </div>
+        </div>
+
+      </div>
+    
     </div>
-  </div>
     `
   }
   for (let food of groceries.hints) {
@@ -85,15 +95,25 @@ function createGroceryCards(groceries) {
     cardString += `
 
     <div id='food_card_${food_info['foodId']}' data-foodId=${food_info['foodId']} class="card" style="width: auto; margin: 2.5%">
-    <img src="${food_info['image'] === null ? 'https://p.kindpng.com/picc/s/79-798754_hoteles-y-centros-vacacionales-dish-placeholder-hd-png.png' : food_info['image']}" alt="${food_info['label']}" width='100px' height='100px'/>
-    <div class="card-body">
-      <h5 class="card-title">${food_info['label']}</h5>
-      <i class="card-text">${food_info['category']}
-      </i>
-      <a id="add_food_btn_${food_info['foodId']}" data-category='${food_info['category']}' data-foodId='${food_info['foodId']}' data-label='${food_info['label']}' data-image='${food_info['image']}' class="btn btn-secondary">+
-      </a>
+      <div class="customrow"> 
+        
+        <div class="customcol"> 
+        <img src="${food_info['image'] === null ? 'https://p.kindpng.com/picc/s/79-798754_hoteles-y-centros-vacacionales-dish-placeholder-hd-png.png' : food_info['image']}" alt="${food_info['label']}" height='120px'/>
+        </div>
+
+        <div class="customcol"> 
+          <div class="card-body">
+            <h5 class="card-title">${food_info['label']}</h5>
+            <i class="card-text">${food_info['category']}</i>
+            <a id="add_food_btn_${food_info['foodId']}" data-category='${food_info['category']}' data-foodId='${food_info['foodId']}' data-label='${food_info['label']}' data-image='${food_info['image']}' class="btn btn-light custom-btn">✔
+          </a>
+          </div>
+        </div>
+
+      </div>
+    
     </div>
-  </div>
+    
     `
   }
 
@@ -113,17 +133,25 @@ function createAddedGroceryCards() {
   for (let food_info of Object.values(HOUSE['grocery_list'])) {
     cardString += `
 
-    <div id='added_card_${food_info['foodId']}' data-foodId=${food_info['foodId']} class="card" style="width: auto; margin: 2.5%">
-    <img src="${food_info['image'] === null ? 'https://p.kindpng.com/picc/s/79-798754_hoteles-y-centros-vacacionales-dish-placeholder-hd-png.png' : food_info['image']}" alt="${food_info['label']}" width='100px' height='100px'/>
-    <div class="card-body">
-      <h5 class="card-title">${food_info['label']}</h5>
-      <i class="card-text">${food_info['category']}
-      <i class="card-text">${food_info['user']['firstName']} ${food_info['user']['lastName']}
-      </i>
-      <a id="remove_food_btn_${food_info['foodId']}" data-foodId='${food_info['foodId']}' class="btn btn-secondary">-
-      </a>
+  <div id='food_card_${food_info['foodId']}' data-foodId=${food_info['foodId']} class="card" style="width: auto; margin: 2.5%">
+      <div class="customrow"> 
+        
+        <div class="customcol"> 
+        <img src="${food_info['image'] === null ? 'https://p.kindpng.com/picc/s/79-798754_hoteles-y-centros-vacacionales-dish-placeholder-hd-png.png' : food_info['image']}" alt="${food_info['label']}" height='120px'/>
+        </div>
+
+        <div class="customcol"> 
+          <div class="card-body">
+            <h5 class="card-title">${food_info['label']}</h5>
+            <i class="card-text">${food_info['category']}</i>
+            <a id="remove_food_btn_${food_info['foodId']}" data-foodId='${food_info['foodId']}' class="btn btn-light custom-btn">🗑
+            </a>
+          </div>
+        </div>
+
+      </div>
+    
     </div>
-  </div>
     `
   }
 
@@ -131,11 +159,26 @@ function createAddedGroceryCards() {
     cardString += `
 
     <div id='added_card_${note['id']}' class="card" style="width: auto; margin: 2.5%">
-    <div class="card-body">
-      <h5 class="card-title">${note['user']['firstName']} ${note['user']['lastName']} says:</h5>
-      <i class="card-text">${note['note']}
-      </i>
-    </div>
+    <div class="customrow separation"> 
+
+      <div class="customcol"> 
+        <div class="card-body">
+          <h5 class="card-title">${note['user']['firstName']} ${note['user']['lastName']} says:</h5>
+          <i class="card-text note-text">${note['note']}
+          </i>
+       </div>
+      </div>  
+
+      <div class="customcol"> 
+        <a class="btn btn-light dl-task-btn custom-btn">🗑
+        </a>
+      </div>  
+      
+
+    </div> 
+    
+
+
   </div>
     `
   }

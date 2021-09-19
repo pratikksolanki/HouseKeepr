@@ -3,12 +3,10 @@
     --black: #2D2D2D;
     --white: #F8F8F8;
 }
-/* .dashboard{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-} */
+.dashboard{
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    border-radius: 10px;
+}
 
 
 /* .task-board{
@@ -26,6 +24,10 @@
     flex-direction: column;
     justify-content: flex-start;
 } */
+
+.border{
+    border: none;
+}
 
 .search-col{
     border-width: 1px;
@@ -54,7 +56,7 @@
 
 .btn-primary:focus,
 .btn-primary.focus {
-    box-shadow: 0 0 0 .1rem rgba(46, 34, 119, 0.712)
+    box-shadow: 0 0 0 .1rem rgba(160, 160, 160, 0.712)
 }
 
 .small-icons{
@@ -63,6 +65,136 @@
 .feather-sm{
     height: 20px;
     width: 20px;
+}
+
+.customrow{
+    display: flex;
+    flex-direction: row;
+}
+
+.separation{
+    justify-content: space-between;
+}
+
+.customcol {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* .fit-div{
+    height: auto;
+} */
+
+.custom-btn{
+    margin-top: 8px;
+    width: 40px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    color: #ffffff;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.card{
+    height: auto;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title, .card-text {
+    float: left;
+}
+
+
+
+.house-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#housekeepr-branding{
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 1em;
+    
+}
+
+#house_header{
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    color: var(--black);
+    /* background-color: var(--purple);
+    border: 5px solid var(--purple);
+    border-radius: 5px; */
+    padding: 5px 10px;
+    margin-bottom: 20px;
+}
+
+h2{
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    color: var(--black);
+    font-size: 24px;
+
+}
+
+.bulletin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .375rem .75rem;
+    margin: 1rem!important;
+    font-size: 36px;
+}
+
+.add-notes-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.notes-input, .add-notes-btn{
+    margin: 10px 10px;
+}
+
+.notes-input{
+    width: 30%;
+    border: 2px solid var(--purple);
+    border-radius: 5px;
+    margin: 10px 20px;
+}
+
+.dl-task-btn{
+    margin-right: 20px;
+}
+
+.customcol-notes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.note-text{
+    max-width: 375px;
 }
 
 

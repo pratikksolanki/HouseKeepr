@@ -12,29 +12,58 @@
   <script src="https://unpkg.com/feather-icons"></script>
   <script src="js/app.js"></script>
   <link rel="stylesheet" href="/css/dashboard.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <h1 id="house_header"></h1>
   <div class="container">
+    <div class="house-info">
+      <div class="title">
+        <img src="/housekeepr2.png" alt="House Keepr Logo" height="72px">
+        <!-- <h1 id="housekeepr-branding">House Keepr</h1>
+        <img src="/housekeepr2.png" alt="House Keepr Logo" height="100px"> -->
+      </div>
+      <h2 id="house_header"></h2>
+    </div>
+    
     <div class="dashboard">
       <!-- <div id="screens">
                 <button>House Tasks</button>
                 <button>My Tasks</button>
             </div> -->
       <div class="row">
-        <div class="col border">
+        <div class="col">
           <div class="search-box" style="width: 80%">
-            <input id="grocery_search_bar" class="m-3 form-control" type="text" placeholder="Search" />
+            <input id="grocery_search_bar" class="m-3 form-control" type="text" placeholder="🔎 Search" />
           </div>
           <div id="groceries-container" class="task-board scrollable-content" style="width: 90%"></div>
         </div>
 
-        <div class="col border">
+        <div class="col">
+          <div class="bulletin">
+            <h2>Bulletin</h2>
+          </div>
           <div id="added-groc-container" class="task-board scrollable-content" style="width: 90%"></div>
-          <input type="text" id="notes_box" placeholder="Enter your notes here..."></input>
-          <button type="button" id="add_note_button" class="btn btn-dark">Add Note</button>
         </div>
+
+      <div class="row">
+        <div class="add-notes-box">
+          <input class="notes-input" type="text" id="notes_box" placeholder="Enter your notes here..."></input>
+          <!-- <script>
+            let note = document.getElementById("input-box");
+            let notesbtn = document.getElementById("note-button");
+            note.addEventListener("keyup", e => {
+              e.preventDefault();
+              if(e.keyCode === 13) {
+                notesbtn.click();
+              }
+            });
+          </script> -->
+          <button class="btn btn-light custom-btn add-notes-btn" type="button" id="add_note_button" class="btn btn-dark">✏</button>
+        </div>
+      </div>
       </div>
     </div>
   </div>
