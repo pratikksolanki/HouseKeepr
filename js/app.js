@@ -59,6 +59,8 @@ function getGroceryData(queryString = "Apple", callback) {
     },
     headers: {
       // API KEY and other headers.
+      "x-rapidapi-host": "edamam-food-and-grocery-database.p.rapidapi.com",
+      "x-rapidapi-key": "01f31a0914mshebf9587336e25bfp16dadcjsncca61ccdae96"
     }
   })
 }
@@ -169,8 +171,8 @@ function createAddedGroceryCards() {
        </div>
       </div>  
 
-      <div class="customcol"> 
-        <a class="btn btn-light dl-task-btn custom-btn">🗑
+      <div id="remove_note_btn_${note['id']}" class="customcol"> 
+        <a class="btn btn-light dl-task-btn custom-btn" data-noteid="${note['id']}">🗑
         </a>
       </div>  
       
@@ -186,10 +188,17 @@ function createAddedGroceryCards() {
 
   $('#added-groc-container').empty()
   $("[id^='remove_food_btn_']").off('click')
+  $("[id^='remove_note_btn_']").off('click')
   $('#added-groc-container').append(cardString)
   $("[id^='remove_food_btn_']").on('click', (e) => {
     delete HOUSE['grocery_list'][e.target.dataset.foodid]
     writeJson('house_data', HOUSE)
+    createAddedGroceryCards()
+  })
+  $("[id^='remove_note_btn_']").on('click', (e) => {
+    delete HOUSE['notes'][e.target.dataset.noteid]
+    writeJson('house_data', HOUSE)
+    console.log(HOUSE)
     createAddedGroceryCards()
   })
 }
