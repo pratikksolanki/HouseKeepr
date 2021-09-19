@@ -58,6 +58,7 @@ function getGroceryData(queryString = "Apple", callback) {
     },
     headers: {
       // API KEY and other headers.
+      
     }
   })
 }
